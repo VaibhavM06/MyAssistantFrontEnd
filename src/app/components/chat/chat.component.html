@@ -1,0 +1,20 @@
+<div class="chat-wrapper">
+  <div class="chat-container" >
+    
+    <div class="chat-header">
+      <h1>My Assistant</h1>
+    </div>
+
+    <div class="messages">
+      <app-message *ngFor="let msg of messages" [message]="msg"></app-message>
+    </div>
+
+    <div class="input-container">
+      <input 
+        [(ngModel)]="userInput" 
+        placeholder="Type your message here..."
+        (keyup.enter)="sendMessage()" />
+      <button (click)="sendMessage()">Send</button>
+    </div>
+  </div>
+</div>
