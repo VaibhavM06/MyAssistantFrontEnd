@@ -21,6 +21,7 @@ body {
   width: 100%;
   max-width: 500px;
   height: 80vh;
+  //background-image: url('/assets/Robot.jpg');
   background-size: cover;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -36,6 +37,21 @@ body {
   font-size: 24px;
   font-weight: 500;
   border-bottom: 1px solid #ccc;
+}
+
+.emoji {
+  font-size: 30px;
+  margin-left: 10px;
+}
+
+.watermark {
+  position: absolute;
+  bottom: 5px;
+  right: 20px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5); /* Subtle watermark effect */
+  font-style: italic;
+  font-weight: 500;
 }
 
 .messages {
@@ -94,6 +110,25 @@ button:hover {
 
 button:focus {
   outline: none;
+}
+
+@media (max-width: 600px) {
+  .chat-header h1 {
+    font-size: 22px;
+  }
+
+  .logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  .emoji {
+    font-size: 24px;
+  }
+
+  .watermark {
+    font-size: 12px;
+  }
 }
 
 @keyframes fadeIn {
